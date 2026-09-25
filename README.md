@@ -125,3 +125,24 @@ Training data is used to fit models. Validation data is used to compare model
 choices. Test data is reserved for the final evaluation and should not be used
 to select features or tune models. The split files are saved under
 `data/splits/`.
+
+## Train baseline models
+
+Install the updated requirements and run:
+
+```bash
+pip install -r requirements.txt
+python train_baselines.py
+python check_baselines.py
+```
+
+The script fits models only on the training period and evaluates them only on
+the 2024 validation period. It compares persistence, a five-day average, the
+historical training mean, and a linear HAR model. Results are saved under
+`results/baselines/`. The 2025 test files are not read during this stage.
+
+The plotting section creates one chart for each model and a four-panel summary
+for each asset. Faint lines show the original daily values, while darker lines
+show seven-day rolling averages to make the comparison easier to read. This
+smoothing is used only in the charts; all reported scores still use the
+original daily forecasts.
