@@ -105,3 +105,23 @@ The shift is applied before the rolling averages are calculated, so today's
 realized variance cannot enter today's predictors. Missing calendar days remain
 missing and invalidate any rolling window that contains them. The results are
 saved under `data/features/`.
+
+## Split the modelling data
+
+After the feature checks pass, run:
+
+```bash
+python split_data.py
+python check_splits.py
+```
+
+The split is chronological rather than random:
+
+- training data ends on 31 December 2023;
+- validation data covers 1 January through 31 December 2024;
+- test data covers 1 January through 31 December 2025.
+
+Training data is used to fit models. Validation data is used to compare model
+choices. Test data is reserved for the final evaluation and should not be used
+to select features or tune models. The split files are saved under
+`data/splits/`.
