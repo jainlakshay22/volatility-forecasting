@@ -71,3 +71,17 @@ data/daily/ETHUSDT_daily_volatility.csv
 ```
 
 The volatility values are daily values and are not annualized.
+
+## Explore the volatility data
+
+After the daily files pass their checks, run:
+
+```bash
+pip install -r requirements.txt
+python explore_volatility.py
+```
+
+The script creates summary tables and charts in `results/exploration/`. It
+reports complete and incomplete days, typical volatility, the most volatile
+days, year-by-year statistics, persistence from one day to the next, and the
+relationship between Bitcoin and Ethereum volatility.
