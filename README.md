@@ -85,3 +85,23 @@ The script creates summary tables and charts in `results/exploration/`. It
 reports complete and incomplete days, typical volatility, the most volatile
 days, year-by-year statistics, persistence from one day to the next, and the
 relationship between Bitcoin and Ethereum volatility.
+
+## Create forecasting features
+
+After exploring the daily data, run:
+
+```bash
+python create_features.py
+python check_features.py
+```
+
+The feature script creates three past-only inputs for each target date:
+
+- the previous day's log realized variance;
+- the average log realized variance over the previous 5 calendar days;
+- the average log realized variance over the previous 22 calendar days.
+
+The shift is applied before the rolling averages are calculated, so today's
+realized variance cannot enter today's predictors. Missing calendar days remain
+missing and invalidate any rolling window that contains them. The results are
+saved under `data/features/`.
