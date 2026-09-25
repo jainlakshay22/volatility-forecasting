@@ -146,3 +146,18 @@ for each asset. Faint lines show the original daily values, while darker lines
 show seven-day rolling averages to make the comparison easier to read. This
 smoothing is used only in the charts; all reported scores still use the
 original daily forecasts.
+
+## Run the final test evaluation
+
+After choosing the model from validation results, run:
+
+```bash
+python evaluate_final_model.py
+python check_final_evaluation.py
+```
+
+Linear HAR is frozen as the selected model because it had the lowest 2024
+validation QLIKE for both assets. It is refitted using the training and
+validation periods together, ending on 31 December 2024, and evaluated once on
+the untouched 2025 test period. The same three benchmarks are included for
+context. Final tables and charts are saved under `results/final_evaluation/`.

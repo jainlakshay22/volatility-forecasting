@@ -1,0 +1,3 @@
+symbol,selected_model,selection_metric,validation_qlike,validation_end,selected_before_test
+BTCUSDT,Linear HAR,validation QLIKE,0.3081738368383572,2024-12-31,True
+ETHUSDT,Linear HAR,validation QLIKE,0.2919477354162073,2024-12-31,True

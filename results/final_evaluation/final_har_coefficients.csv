@@ -1,0 +1,9 @@
+symbol,term,coefficient
+BTCUSDT,intercept,-0.9617920114613128
+BTCUSDT,daily_log_variance,0.48877694892408885
+BTCUSDT,weekly_log_variance,0.07415716161060595
+BTCUSDT,monthly_log_variance,0.3073338789755332
+ETHUSDT,intercept,-0.6326490681717578
+ETHUSDT,daily_log_variance,0.47768305825147006
+ETHUSDT,weekly_log_variance,0.17243545796761872
+ETHUSDT,monthly_log_variance,0.25857695954805854
