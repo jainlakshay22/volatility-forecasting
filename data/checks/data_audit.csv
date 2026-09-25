@@ -1,0 +1,3 @@
+symbol,first_time,last_time,actual_rows,expected_rows,missing_times,extra_times,repeated_times
+BTCUSDT,2020-01-01T00:00:00+00:00,2025-12-31T23:55:00+00:00,630834,631296,462,0,0
+ETHUSDT,2020-01-01T00:00:00+00:00,2025-12-31T23:55:00+00:00,630834,631296,462,0,0
