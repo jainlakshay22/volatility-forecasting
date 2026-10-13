@@ -1,0 +1,8 @@
+{
+  "method": "paired moving-block bootstrap",
+  "block_length_days": 7,
+  "number_of_bootstraps": 5000,
+  "random_seed": 42,
+  "confidence_level_percent": 95,
+  "interpretation": "Positive loss differences mean Linear HAR has lower loss. Intervals excluding zero provide stronger evidence of improvement."
+}

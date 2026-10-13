@@ -1,0 +1,25 @@
+symbol,model,feature,value_type,value
+BTCUSDT,Linear HAR,daily_log_variance,coefficient,0.4801316567648214
+BTCUSDT,Linear HAR,weekly_log_variance,coefficient,0.14416293259618174
+BTCUSDT,Linear HAR,monthly_log_variance,coefficient,0.25908600661767395
+BTCUSDT,Ridge HAR,daily_log_variance,coefficient,0.47943768869320796
+BTCUSDT,Ridge HAR,weekly_log_variance,coefficient,0.14512995647170032
+BTCUSDT,Ridge HAR,monthly_log_variance,coefficient,0.25848932879912173
+BTCUSDT,Random Forest,daily_log_variance,feature importance,0.7004180757414731
+BTCUSDT,Random Forest,weekly_log_variance,feature importance,0.1518394839145205
+BTCUSDT,Random Forest,monthly_log_variance,feature importance,0.1477424403440063
+BTCUSDT,Gradient Boosting,daily_log_variance,feature importance,0.5640087806209326
+BTCUSDT,Gradient Boosting,weekly_log_variance,feature importance,0.20065421174054204
+BTCUSDT,Gradient Boosting,monthly_log_variance,feature importance,0.2353370076385254
+ETHUSDT,Linear HAR,daily_log_variance,coefficient,0.46414808622276355
+ETHUSDT,Linear HAR,weekly_log_variance,coefficient,0.23928899467827142
+ETHUSDT,Linear HAR,monthly_log_variance,coefficient,0.21552419675353568
+ETHUSDT,Ridge HAR,daily_log_variance,coefficient,0.4635425865886693
+ETHUSDT,Ridge HAR,weekly_log_variance,coefficient,0.2397487093724847
+ETHUSDT,Ridge HAR,monthly_log_variance,coefficient,0.21540167542378397
+ETHUSDT,Random Forest,daily_log_variance,feature importance,0.4296578725668893
+ETHUSDT,Random Forest,weekly_log_variance,feature importance,0.4872490378453676
+ETHUSDT,Random Forest,monthly_log_variance,feature importance,0.083093089587743
+ETHUSDT,Gradient Boosting,daily_log_variance,feature importance,0.4916173951944261
+ETHUSDT,Gradient Boosting,weekly_log_variance,feature importance,0.37275679680121426
+ETHUSDT,Gradient Boosting,monthly_log_variance,feature importance,0.13562580800435958

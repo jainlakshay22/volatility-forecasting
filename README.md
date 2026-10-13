@@ -161,3 +161,44 @@ validation QLIKE for both assets. It is refitted using the training and
 validation periods together, ending on 31 December 2024, and evaluated once on
 the untouched 2025 test period. The same three benchmarks are included for
 context. Final tables and charts are saved under `results/final_evaluation/`.
+
+## Estimate uncertainty
+
+After the final evaluation, run:
+
+```bash
+python analyze_uncertainty.py
+python check_uncertainty.py
+```
+
+This stage does not change or retune the model. It compares paired daily losses
+using a seven-day moving-block bootstrap with 5,000 resamples. The analysis
+reports 95% confidence intervals for Linear HAR's loss improvement over each
+benchmark. Results are saved under `results/uncertainty/`.
+
+## Write the final report
+
+After all checks pass, run:
+
+```bash
+python write_final_report.py
+```
+
+The report is written to `FINAL_REPORT.md` using the saved result tables. This
+keeps the reported values connected to the reproducible analysis outputs.
+
+## Explore additional models
+
+Because the 2025 test results have already been examined, newly introduced
+models must not be tuned against that period. Run the exploratory comparison:
+
+```bash
+python train_additional_models.py
+python check_additional_models.py
+```
+
+This compares Linear HAR, Ridge HAR, Random Forest, and Gradient Boosting using
+the original training period and 2024 validation period only. The model settings
+are fixed in advance and results are saved under `results/additional_models/`.
+Any newly selected model will require a new untouched evaluation period before
+it can support a final out-of-sample claim.
